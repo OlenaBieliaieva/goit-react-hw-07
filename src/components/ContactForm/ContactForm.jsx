@@ -15,7 +15,7 @@ const ContactForm = () => {
     const form = e.target;
     const name = form.elements.name.value.trim();
     const number = form.elements.number.value;
-    dispatch(addContact(name, number));
+    dispatch(addContact({ name, number }));
     form.reset();
     toast.success("Added");
   };
